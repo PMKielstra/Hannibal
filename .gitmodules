@@ -1,0 +1,3 @@
+[submodule "ngadata"]
+	path = ngadata
+	url = https://github.com/NationalGalleryOfArt/opendata

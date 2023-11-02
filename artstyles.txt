@@ -1,0 +1,11 @@
+historical
+abstract
+modern
+religious
+renaissance
+baroque
+classical
+romantic
+surreal
+impressionist
+expressionist
