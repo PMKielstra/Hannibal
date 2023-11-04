@@ -25,7 +25,7 @@ def prep_data():
     global art
 
     print("Synchronizing art data with NGA...")
-    repo = Repo(".")
+    repo = Repo(path.dirname(path.realpath(__file__)))
     assert len(repo.submodules) == 1 # Just one submodule -- NGA data
     repo.submodules[0].update(to_latest_revision=True)
 
