@@ -85,7 +85,6 @@ def poll_and_update():
     updating_painting = False
     
     if path.getmtime(filepath) != last_file_update_time:
-        updating_painting = True
         last_file_update_time = path.getmtime(filepath)
         panel.configure(image = None) # TODO: Add a nice "Loading..." image here.  Something artistic.
         with open(filepath, 'r') as file:
@@ -98,6 +97,7 @@ def poll_and_update():
                 current_search_in_book_titles = new_search_in_book_titles
                 painting_ids = new_painting_ids
                 good.play()
+                updating_painting = True
             else:
                 bad.play()
                 # TODO: Add an image to indicate failure to find anything rather than just blacking out the screen.
