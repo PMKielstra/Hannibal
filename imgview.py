@@ -89,7 +89,7 @@ def poll_and_update():
         last_file_update_time = path.getmtime(filepath)
         panel.configure(image = None) # TODO: Add a nice "Loading..." image here.  Something artistic.
         with open(filepath, 'r') as file:
-            line = file.readline()
+            line = file.readline().strip()
             new_search_term = line[1:]
             new_search_in_book_titles = (line[0] == "1")
             new_painting_ids = nga.search(new_search_term, new_search_in_book_titles)
